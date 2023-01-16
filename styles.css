@@ -57,7 +57,7 @@ body {
 
 .drawer:hover ~ .navbar,
 .drawer:hover ~ .content {
-  margin-left: calc(var(--drawer-width) -5rem);
+  margin-left: calc(var(--drawer-width) - 5rem);
 }
 
 .menuItem {
@@ -101,10 +101,33 @@ body {
   padding-top: 10px;
 }
 
-.nav {
+/* Navbar Styling */
+.navbar {
   grid-area: nav;
+  transition: var(--transition-notDrawer);
+  background-color: var(--nav-bg-1);
+  padding: 1.5rem 3rem;
+  border-bottom: 2px solid rgb(219, 219, 219);
+}
+
+.topNav {
+  display: grid;
+  grid-template-columns: 1fr max-content;
+  margin-bottom: 2.5rem;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+  width: 100%;
 }
 
 .content {
   grid-area: content;
+  transition: var(--transition-notDrawer);
+}
+
+img {
+  max-width: 50px;
 }
